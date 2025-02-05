@@ -20,8 +20,10 @@ public class WaitUtility {
 
 	public void waitForElementToBePresent(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.presenceOfElementLocated((By) element));
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//input[@id='password']")));
+
 	}
+	
 
 	public void waitForVisibilityOfElement(WebDriver driver, WebElement element)
 

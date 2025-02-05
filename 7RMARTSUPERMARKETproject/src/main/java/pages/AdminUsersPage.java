@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
@@ -41,6 +42,9 @@ public class AdminUsersPage {
 	// sucess-alert-locator
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement alert_sucess;
+	//failure-alert-locator
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	WebElement alert_failure;
 
 	@FindBy(xpath = "//input[@name='un']")
 	WebElement txt_search_username;
@@ -52,17 +56,26 @@ public class AdminUsersPage {
 	WebElement btn_search_inside_search;
 
 	// after search-locator
-	@FindBy(xpath = "//td[text()='XYZ^^^']")
+	@FindBy(xpath = "//h4[text()='Admin Users']")
 	WebElement search_result;
+	
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']")
+	WebElement search_no_result;
 
 	// Assertion method-Alert
 	public boolean isAlertSucessDisplayed() {
 		return alert_sucess.isDisplayed();
 	}
+	public boolean isAlertFaiureDisplayed() {
+		return alert_failure.isDisplayed();
+	}
 
 	// Assertion method-search result
 	public boolean isSearchResultDisplayed() {
 		return search_result.isDisplayed();
+	}
+	public boolean isSearchResultNotDisplayed() {
+		return search_no_result.isDisplayed();
 	}
 
 	public AdminUsersPage clickBtnNew() {
@@ -120,5 +133,6 @@ public class AdminUsersPage {
 		btn_search_inside_search.click();
 		return this;
 	}
+	
 
 }

@@ -1,6 +1,7 @@
 package constant;
 
 public class Constant {
+	public static final String CONFIG_FILE=System.getProperty("user.dir")+"/src/test/resources/config.properties";
 
 	public static final String ERROR_MSG_LoginWithValidCredentials = "Home Page Not Loaded";
 	public static final String ERROR_MSG_LoginWithValidUsernameInvalidPassword = "Alert Message Not Displayed";
@@ -8,6 +9,7 @@ public class Constant {
 	public static final String ERROR_MSG_LoginWithInvalidUsenameInValidPassword = "Alert Message Not Displayed";
 
 	public static final String ERROR_MSG_CreationOfNewAdminUsers = "New Admin User Not Created";
+	public static final String ERROR_MSG_UserAlreadyExists="User already Exists";
 	public static final String ERROR_MSG_AdminUserSearch = "Search Result Not Found";
 
 	public static final String ERROR_MSG_LogOut = "Log out Not sucessfull";
