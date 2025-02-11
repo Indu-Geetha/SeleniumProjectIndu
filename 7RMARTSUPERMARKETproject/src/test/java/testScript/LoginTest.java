@@ -50,7 +50,7 @@ public class LoginTest extends Base {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups= {"smoke"})
 	public void verifyLoginWithInvalidUsenameValidPassword() throws IOException {
 		String username = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
@@ -65,7 +65,7 @@ public class LoginTest extends Base {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups= {"smoke"})
 	public void verifyLoginWithInvalidUsenameInValidPassword() throws IOException {
 
 		String username = ExcelUtility.getStringData(2, 0, "LoginPage");

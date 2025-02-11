@@ -18,7 +18,7 @@ public class AdminUsersTest extends Base {
 	public AdminUsersPage admin_users;
 	public FakerUtility faker = new FakerUtility(); // Initialized at class level
 
-	@Test(priority = 1)
+	@Test(priority = 1,retryAnalyzer = retry.Retry.class)//retry in case of failed execution
 	public void verifyCreationOfNewAdminUsers() throws IOException {
 		String username_valid = ExcelUtility.getStringData(1, 0, "AdminUserTestData");
 		String password_valid = ExcelUtility.getStringData(1, 1, "AdminUserTestData");
@@ -83,7 +83,8 @@ public class AdminUsersTest extends Base {
 			System.out.println("Search not successful: User not found - " + username_search);
 		}
 	}
+
 	public void verifyAdminUserDelete() {
-		
+
 	}
 }

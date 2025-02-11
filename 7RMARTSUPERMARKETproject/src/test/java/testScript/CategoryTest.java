@@ -20,11 +20,13 @@ public class CategoryTest extends Base {
 	public void verifyCreationOfNewCategoryInCategoryPage() throws IOException, AWTException, InterruptedException {
 		String username_valid = ExcelUtility.getStringData(1, 0, "CategoryPageTestData");
 		String password_valid = ExcelUtility.getStringData(1, 1, "CategoryPageTestData");
-		String category_name = ExcelUtility.getStringData(2, 0, "CategoryPageTestData");
+		String category_name = ExcelUtility.getStringData(3, 0, "CategoryPageTestData");
 
 		LoginPage login = new LoginPage(driver);
 		login.setUserNamePassword(username_valid, password_valid);
+		
 		home = login.clickSignInButton();
+		
 		category = home.categoryClick();
 		category.btnCategoryNewClick();
 		category.nameCategory(category_name);

@@ -33,7 +33,7 @@ public class CategoryPage {
 	@FindBy(xpath = "//input[@id='category']")
 	WebElement txt_category_input;
 
-	@FindBy(xpath = "//li[@id='134-selectable']")
+	@FindBy(xpath = "//li[@id='134-selectable']") //// li[@class='ms-elem-selectable ms-hover']
 	WebElement box_select_groups;
 
 	@FindBy(xpath = "//input[@type='file']")
@@ -75,7 +75,7 @@ public class CategoryPage {
 
 	public CategoryPage fileUploadSendKeys() throws AWTException, InterruptedException {
 		wait.waitForVisibilityOfElement(driver, btn_choose_file);
-		fileupload.sendKeysForFileUpload(btn_choose_file, Constant.IMAGE);
+		fileupload.sendKeysForFileUpload(btn_choose_file, Constant.CAT_IMAGE);
 		return this;
 	}
 
@@ -92,7 +92,7 @@ public class CategoryPage {
 	}
 
 	public boolean isCategoryCreatedSucessDisplayed() {
-		return alert_locator.isDisplayed();
+		return alert_locator.getText().contains("Success");
 	}
 
 	public CategoryPage btnCategoryDeleteClick() {
