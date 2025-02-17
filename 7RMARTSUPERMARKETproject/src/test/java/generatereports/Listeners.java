@@ -11,15 +11,16 @@ import com.aventstack.extentreports.Status;
 
 import utility.ExtentReportUtility;
 
-public class Listeners implements ITestListener {
+public class Listeners implements ITestListener {//Interface from TestNG to listen to test execution events
+	//:class listen to test execution events.
 	ExtentTest test;
 
-	ExtentReports extent = ExtentReportUtility.createExtentReports();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	ExtentReports extent = ExtentReportUtility.createExtentReports();//report instance.
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();//ensuring thread safety in parallel execution.
 
 	public void onTestStart(ITestResult result) {// calls when test methods starts
 		ITestListener.super.onTestStart(result);
-		test = extent.createTest(result.getMethod().getMethodName());
+		test = extent.createTest(result.getMethod().getMethodName());//METHOD AND METHOD NAME GET AND ATTACHES IN REPORT
 		extentTest.set(test);
 	}
 
@@ -41,7 +42,7 @@ public class Listeners implements ITestListener {
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
 
-			e.printStackTrace();
+			e.printStackTrace();//why exception 
 		} catch (NoSuchFieldException e) {
 
 			e.printStackTrace();

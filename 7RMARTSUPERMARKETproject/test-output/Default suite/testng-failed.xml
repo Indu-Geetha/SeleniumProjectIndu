@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScript.AdminUsersTest">
+      <class name="testScript.ManageNewsTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyCreationOfNewAdminUsers"/>
           <include name="setUp"/>
+          <include name="verifyNewNewsCreation"/>
+          <include name="verifyCreatedNewsSearch"/>
         </methods>
-      </class> <!-- testScript.AdminUsersTest -->
+      </class> <!-- testScript.ManageNewsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -11,6 +11,11 @@ public class PageUtility {
 
 	public WebDriver driver;
 
+	public PageUtility(WebDriver driver) {
+        this.driver = driver;
+    }
+
+
 	// MethodForSelectByVisible_Text
 	public void selectByVisibleText(WebElement element, String visible_txt) {
 

@@ -4,13 +4,21 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browzer" value="chrome"/>
     <classes>
-      <class name="testScript.AdminUsersTest">
+      <class name="testScript.CategoryTest">
+        <methods>
+          <include name="verifyDeleteOfCategory"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyCreationOfNewCategoryInCategoryPage"/>
+        </methods>
+      </class> <!-- testScript.CategoryTest -->
+      <class name="testScript.LoginTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyCreationOfNewAdminUsers"/>
+          <include name="verifyLoginWithValidUsernameInvalidPassword"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testScript.AdminUsersTest -->
+      </class> <!-- testScript.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

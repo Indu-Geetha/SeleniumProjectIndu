@@ -4,11 +4,12 @@
 	<test thread-count="5" name="Test">
 		<parameter name="browzer" value="chrome" />
 		<classes>
-			<class name="testScript.AdminUsersTest">
-				
-			</class>
+			<class name="testScript.AdminUsersTest"></class>
+			<class name="testScript.LoginTest"></class>
+			<class name="testScript.ManageNewsTest"></class>
+			<class name="testScript.CategoryTest"></class>
 		</classes>
 	</test> <!--
 	Test -->
-</suite> <!--
+</suite> <!--	
 Suite -->

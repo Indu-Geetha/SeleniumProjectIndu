@@ -14,7 +14,7 @@ import utility.WaitUtility;
 
 public class SubCategoryPage {
 	public WebDriver driver;
-	PageUtility pageutility = new PageUtility();
+	PageUtility pageutility = new PageUtility(driver);
 	FileUploadUtility fileupload = new FileUploadUtility();
 	WaitUtility wait = new WaitUtility();
 

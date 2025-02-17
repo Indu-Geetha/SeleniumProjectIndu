@@ -48,7 +48,6 @@ public class ManageNewsPage {
 
 	public ManageNewsPage enterNews() {
 		textarea_news.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
-		;
 		return this;
 	}
 
@@ -69,7 +68,7 @@ public class ManageNewsPage {
 
 	public ManageNewsPage enterNewstoSearch() {
 		txt_enter_search_news.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
-		;
+		
 		return this;
 	}
 

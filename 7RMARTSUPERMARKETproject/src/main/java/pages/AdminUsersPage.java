@@ -13,10 +13,14 @@ import utility.WaitUtility;
 public class AdminUsersPage {
 
 	public WebDriver driver;
-	PageUtility pageutility = new PageUtility();
+	public PageUtility pageutility ;
+	public WaitUtility waitUtility;
+	
 
 	public AdminUsersPage(WebDriver driver) {
 		this.driver = driver;
+		this.pageutility = new PageUtility(driver);  // Initialize with driver
+        this.waitUtility = new WaitUtility();  // Initialize WaitUtility
 		PageFactory.initElements(driver, this);
 
 	}
@@ -97,11 +101,10 @@ public class AdminUsersPage {
 		return this;
 	}
 
-	public AdminUsersPage selectUserType() {
-
-		pageutility.selectByVisibleText(user_type_dropdown, "Admin");// WebElement ,value pass
-		return this;
-	}
+	 public AdminUsersPage selectUserType(String userType) {  // Now dynamic!
+	        pageutility.selectByVisibleText(user_type_dropdown, userType);
+	        return this;
+	 }
 
 	public AdminUsersPage clickSave() {
 
@@ -123,9 +126,9 @@ public class AdminUsersPage {
 		return this;
 	}
 
-	public AdminUsersPage selectUserTypeSearch() {
+	public AdminUsersPage selectUserTypeSearch(String userType) {
 
-		pageutility.selectByVisibleText(user_type_search_drpdwn, "Admin");
+		pageutility.selectByVisibleText(user_type_search_drpdwn, userType);
 		return this;
 	}
 

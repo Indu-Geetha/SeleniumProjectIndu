@@ -19,7 +19,7 @@ public class CategoryPage {
 	public WebDriver driver;
 	WaitUtility wait = new WaitUtility();
 	FileUploadUtility fileupload = new FileUploadUtility();
-	PageUtility page = new PageUtility();
+	PageUtility page = new PageUtility(driver);
 
 	public CategoryPage(WebDriver driver) {
 		this.driver = driver;
@@ -33,7 +33,7 @@ public class CategoryPage {
 	@FindBy(xpath = "//input[@id='category']")
 	WebElement txt_category_input;
 
-	@FindBy(xpath = "//li[@id='134-selectable']") //// li[@class='ms-elem-selectable ms-hover']
+	@FindBy(xpath = "//li[@id='134-selectable']") 
 	WebElement box_select_groups;
 
 	@FindBy(xpath = "//input[@type='file']")
@@ -75,7 +75,7 @@ public class CategoryPage {
 
 	public CategoryPage fileUploadSendKeys() throws AWTException, InterruptedException {
 		wait.waitForVisibilityOfElement(driver, btn_choose_file);
-		fileupload.sendKeysForFileUpload(btn_choose_file, Constant.CAT_IMAGE);
+		fileupload.sendKeysForFileUpload(btn_choose_file, Constant.IMAGE);
 		return this;
 	}
 

@@ -34,8 +34,9 @@ public class AdminUsersTest extends Base {
 		admin_users.enterUsermame(username_new);
 
 		String password_new = ExcelUtility.getStringData(2, 1, "AdminUserTestData");
+		String usertype_new=ExcelUtility.getStringData(2, 2, "AdminUserTestData");
 		admin_users.enterPassword(password_new);
-		admin_users.selectUserType();
+		admin_users.selectUserType(usertype_new);
 		admin_users.clickSave();
 
 		// Handling user creation success or failure
@@ -57,6 +58,7 @@ public class AdminUsersTest extends Base {
 		String username_valid = ExcelUtility.getStringData(1, 0, "AdminUserTestData");
 		String password_valid = ExcelUtility.getStringData(1, 1, "AdminUserTestData");
 		String username_search = faker.getFakeFirstName();
+		String usertype_search=ExcelUtility.getStringData(1, 2, "AdminUserTestData");
 		// String username_search = ExcelUtility.getStringData(5, 0,
 		// "AdminUserTestData");
 		// Validate input data
@@ -69,7 +71,7 @@ public class AdminUsersTest extends Base {
 
 		admin_users.clickBtnSearch();
 		admin_users.enterSearchUsermame(username_search);
-		admin_users.selectUserTypeSearch();
+		admin_users.selectUserTypeSearch(usertype_search);
 		admin_users.clickBtnSearchInsideSearch();
 
 		// Handling search result presence

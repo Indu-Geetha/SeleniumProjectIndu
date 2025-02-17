@@ -10,18 +10,18 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class ScreenshotUtility {
+public class ScreenshotUtility {//to capture current situation of the driver
 	public void captureFailureScreenShot(WebDriver driver, String name) throws IOException {
 		// Interface & method for Capture Screenshot
 		TakesScreenshot scrShot = (TakesScreenshot) driver;
-		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
+		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);// Captures the screenshot and stores it as a temporary File.
 		File f1 = new File(System.getProperty("user.dir") + "\\OutputScreenshots");// Generating folder using Java
 																					// (user.dir) automatically folder
 																					// create cheyn
 		if (!f1.exists()) {
 			f1.mkdirs();// mkdir --> will create folder using java make directory
 		}
-		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date(0));// date time capture using
+		String timeStamp = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss").format(new Date());// date time capture using
 																							// java
 		File finalDestination = new File(
 				System.getProperty("user.dir") + "\\OutputScreenshots\\" + name + "_" + timeStamp + ".png");

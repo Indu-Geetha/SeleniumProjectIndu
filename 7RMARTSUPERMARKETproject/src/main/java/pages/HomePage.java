@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utility.PageUtility;
+
 public class HomePage {
 
 	public WebDriver driver;
@@ -26,7 +28,7 @@ public class HomePage {
 	WebElement admin_user_text;
 
 	// Manage-News
-	@FindBy(xpath = "(//a[@class='small-box-footer'])[9]")
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and contains(@class, 'small-box-footer')]")
 	WebElement manage_news_text;
 
 	// Sub-Category
@@ -34,7 +36,7 @@ public class HomePage {
 	WebElement sub_category_txt;
 	
 	//Category
-	@FindBy(xpath="(//a[@class='small-box-footer'])[3]")
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')]")
 	WebElement category_txt;
 
 	public AdminUsersPage adminUsersClick() {
@@ -43,7 +45,9 @@ public class HomePage {
 	}
 
 	public ManageNewsPage manageNewsClick() {
-		manage_news_text.click();
+		PageUtility pageutil=new PageUtility(driver);
+		pageutil.javaScriptExecutorMethodScrollToElement(manage_news_text);
+		pageutil.javaScriptExecutorMethodClick(manage_news_text);
 		return new ManageNewsPage(driver);
 	}
 
@@ -53,6 +57,9 @@ public class HomePage {
 	}
 	
 	public CategoryPage categoryClick() {
+		PageUtility pageutil=new PageUtility(driver);
+		pageutil.javaScriptExecutorMethodScrollToElement(category_txt);
+		pageutil.javaScriptExecutorMethodClick(category_txt);
 		category_txt.click();
 		return new CategoryPage(driver);
 	}
