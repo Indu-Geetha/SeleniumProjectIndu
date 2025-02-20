@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="aaaaaaaa"/>
+  <parameter name="username" value="admin"/>
   <test thread-count="5" name="Test(failed)">
     <parameter name="browzer" value="chrome"/>
     <classes>
-      <class name="testScript.CategoryTest">
-        <methods>
-          <include name="verifyDeleteOfCategory"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyCreationOfNewCategoryInCategoryPage"/>
-        </methods>
-      </class> <!-- testScript.CategoryTest -->
-      <class name="testScript.LoginTest">
+      <class name="testScript.SubCategoryTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyLoginWithValidUsernameInvalidPassword"/>
           <include name="setUp"/>
+          <include name="verifyCreationOfNewSubCategory__FileUploadUsingSendKeys"/>
         </methods>
-      </class> <!-- testScript.LoginTest -->
+      </class> <!-- testScript.SubCategoryTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

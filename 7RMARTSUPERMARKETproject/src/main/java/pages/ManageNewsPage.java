@@ -46,10 +46,10 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage enterNews() {
-		textarea_news.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
-		return this;
-	}
+	public ManageNewsPage enterNews(String newsText) {
+        textarea_news.sendKeys(newsText);
+        return this;
+    }
 
 	public ManageNewsPage newManageNewsSaveClick() {
 		btn_save_news.click();
@@ -66,11 +66,10 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage enterNewstoSearch() {
-		txt_enter_search_news.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry.");
-		
-		return this;
-	}
+	public ManageNewsPage enterNewstoSearch(String searchText) {
+        txt_enter_search_news.sendKeys(searchText);
+        return this;
+    }
 
 	public ManageNewsPage searchNewsSearchBtnClick() {
 		btn_search_in_news_search.click();

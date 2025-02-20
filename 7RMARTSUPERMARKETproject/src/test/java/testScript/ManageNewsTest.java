@@ -25,9 +25,9 @@ public class ManageNewsTest extends Base {
 		login.setUserNamePassword(username, password);
 		home = login.clickSignInButton();
 
+		String newsText = ExcelUtility.getStringData(1, 2, "ManageNewsTestData");
 		manage_news = home.manageNewsClick();
-
-		manage_news.newManageNewsClick().enterNews().newManageNewsSaveClick();
+		manage_news.newManageNewsClick().enterNews(newsText).newManageNewsSaveClick();
 
 		// Assertion
 		boolean isSuccessNewsCreationAlert = manage_news.isSucessAlertDisplayed();
@@ -44,9 +44,9 @@ public class ManageNewsTest extends Base {
 		LoginPage login = new LoginPage(driver);
 		login.setUserNamePassword(username, password);
 		home = login.clickSignInButton();
-
 		manage_news = home.manageNewsClick();
-		manage_news.searchCreatedNewsClick().enterNewstoSearch().searchNewsSearchBtnClick();
+		String newsTextToSearch = ExcelUtility.getStringData(1, 3, "ManageNewsTestData");
+		manage_news.searchCreatedNewsClick().enterNewstoSearch(newsTextToSearch).searchNewsSearchBtnClick();
 
 		// Assertion
 		boolean isSearchedNewsFound = manage_news.isSearchedNewsDisplayed();

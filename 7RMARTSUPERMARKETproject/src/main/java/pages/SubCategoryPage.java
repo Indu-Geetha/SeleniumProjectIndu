@@ -49,7 +49,7 @@ public class SubCategoryPage {
 
 	public SubCategoryPage selectCategoryDrp() {
 
-		pageutility.selectByValue(category_drp_locator, "557");// WebElement ,value pass
+		pageutility.selectByValue(category_drp_locator, "563");// WebElement ,value pass
 		return this;
 	}
 
@@ -67,7 +67,9 @@ public class SubCategoryPage {
 	}
 
 	public SubCategoryPage clickBtnSaveSubCategory() {
-		btn_Save_subCategory.click();
+		PageUtility pageUtility=new PageUtility(driver);
+		pageUtility.javaScriptExecutorMethodScrollToElement(btn_Save_subCategory);
+	    pageUtility.javaScriptExecutorMethodClick(btn_Save_subCategory);
 		return this;
 	}
 

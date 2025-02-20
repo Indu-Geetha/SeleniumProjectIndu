@@ -36,7 +36,7 @@ public class HomePage {
 	WebElement sub_category_txt;
 	
 	//Category
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')]")
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')][1]")
 	WebElement category_txt;
 
 	public AdminUsersPage adminUsersClick() {
@@ -58,9 +58,9 @@ public class HomePage {
 	
 	public CategoryPage categoryClick() {
 		PageUtility pageutil=new PageUtility(driver);
-		pageutil.javaScriptExecutorMethodScrollToElement(category_txt);
+		//pageutil.javaScriptExecutorMethodScrollToElement(category_txt);
 		pageutil.javaScriptExecutorMethodClick(category_txt);
-		category_txt.click();
+		//category_txt.click();
 		return new CategoryPage(driver);
 	}
 

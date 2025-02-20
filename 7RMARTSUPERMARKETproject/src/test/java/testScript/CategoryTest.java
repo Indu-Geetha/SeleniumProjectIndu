@@ -24,15 +24,15 @@ public class CategoryTest extends Base {
 
 		LoginPage login = new LoginPage(driver);
 		login.setUserNamePassword(username_valid, password_valid);
-		
+
 		home = login.clickSignInButton();
-		
+
 		category = home.categoryClick();
-		category.btnCategoryNewClick();
-		category.nameCategory(category_name);
-		category.btnDiscountClick();
-		category.fileUploadSendKeys();
-		category.btnCategorySaveClick();
+		category.clickNewCategoryButton();
+		category.enterCategoryName(category_name);
+		category.selectDiscountGroup();
+		category.uploadFile();
+		category.clickSaveButton();
 
 		// Assertion
 		boolean isSucessfullyNewCategoryCreated = category.isCategoryCreatedSucessDisplayed();
@@ -41,7 +41,7 @@ public class CategoryTest extends Base {
 	}
 
 	@Test(priority = 2)
-	public void verifyDeleteOfCategory() throws IOException {
+	public void verifyDeleteOfCategory() throws IOException, AWTException, InterruptedException {
 		String username_valid = ExcelUtility.getStringData(1, 0, "CategoryPageTestData");
 		String password_valid = ExcelUtility.getStringData(1, 1, "CategoryPageTestData");
 
@@ -55,6 +55,5 @@ public class CategoryTest extends Base {
 		boolean isSucessfullyDeletedTopmostCategory = category.isCategoryDeleted();
 		Assert.assertTrue(isSucessfullyDeletedTopmostCategory, Constant.ERROR_MSG_CreationOfNewCategory);
 	}
-	
 
 }

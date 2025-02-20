@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="7" failed="3" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-17T13:09:28 IST" name="Suite" finished-at="2025-02-17T13:10:22 IST" duration-ms="53292">
+  <suite started-at="2025-02-20T15:20:21 IST" name="Suite" finished-at="2025-02-20T15:21:04 IST" duration-ms="43218">
     <groups>
       <group name="smoke">
-        <method signature="LoginTest.verifyLoginWithInvalidUsenameValidPassword()[pri:3, instance:testScript.LoginTest@15de0b3c]" name="verifyLoginWithInvalidUsenameValidPassword" class="testScript.LoginTest"/>
-        <method signature="LoginTest.verifyLoginWithInvalidUsenameInValidPassword()[pri:4, instance:testScript.LoginTest@15de0b3c]" name="verifyLoginWithInvalidUsenameInValidPassword" class="testScript.LoginTest"/>
+        <method signature="LoginTest.verifyLoginWithInvalidUsenameValidPassword()[pri:3, instance:testScript.LoginTest@557caf28]" name="verifyLoginWithInvalidUsenameValidPassword" class="testScript.LoginTest"/>
+        <method signature="LoginTest.verifyLoginWithInvalidUsenameInValidPassword()[pri:4, instance:testScript.LoginTest@557caf28]" name="verifyLoginWithInvalidUsenameInValidPassword" class="testScript.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-02-17T13:09:28 IST" name="Test" finished-at="2025-02-17T13:10:22 IST" duration-ms="53292">
+    <test started-at="2025-02-20T15:20:21 IST" name="Test" finished-at="2025-02-20T15:21:04 IST" duration-ms="43218">
       <class name="testScript.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:40 IST" name="setUp" finished-at="2025-02-17T13:09:42 IST" duration-ms="1881" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:21 IST" name="setUp" finished-at="2025-02-20T15:20:24 IST" duration-ms="2636" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:42 IST" name="verifyLoginWithValidCredentials" data-provider="loginData" finished-at="2025-02-17T13:09:42 IST" duration-ms="559" status="PASS">
+        <test-method signature="verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:24 IST" name="verifyLoginWithValidCredentials" data-provider="loginData" finished-at="2025-02-20T15:20:25 IST" duration-ms="877" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,88 +38,56 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithValidCredentials -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:42 IST" name="tearDown" finished-at="2025-02-17T13:09:42 IST" duration-ms="163" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:25 IST" name="tearDown" finished-at="2025-02-20T15:20:25 IST" duration-ms="210" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:testScript.LoginTest@15de0b3c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:1, instance:testScript.LoginTest@557caf28] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method signature="verifyLoginWithValidUsernameInvalidPassword(java.lang.String,java.lang.String)[pri:2, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:42 IST" name="verifyLoginWithValidUsernameInvalidPassword" finished-at="2025-02-17T13:09:42 IST" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'username' is required by @Test on method verifyLoginWithValidUsernameInvalidPassword but has not been marked @Optional or defined
-in C:\Users\sreen\git\SeleniumProjectIndu\7RMARTSUPERMARKETproject\src\test\resources\testng.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'username' is required by @Test on method verifyLoginWithValidUsernameInvalidPassword but has not been marked @Optional or defined
-in C:\Users\sreen\git\SeleniumProjectIndu\7RMARTSUPERMARKETproject\src\test\resources\testng.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:264)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
-at org.testng.internal.Parameters.createParameters(Parameters.java:690)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:885)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:25 IST" name="setUp" finished-at="2025-02-20T15:20:27 IST" duration-ms="1929" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginWithValidUsernameInvalidPassword(java.lang.String,java.lang.String)[pri:2, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:27 IST" name="verifyLoginWithValidUsernameInvalidPassword" finished-at="2025-02-20T15:20:27 IST" duration-ms="430" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aaaaaaaa]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithValidUsernameInvalidPassword -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:42 IST" name="setUp" finished-at="2025-02-17T13:09:44 IST" duration-ms="2053" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:27 IST" name="tearDown" finished-at="2025-02-20T15:20:27 IST" duration-ms="137" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithInvalidUsenameValidPassword()[pri:3, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:44 IST" name="verifyLoginWithInvalidUsenameValidPassword" finished-at="2025-02-17T13:09:45 IST" duration-ms="533" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidUsenameValidPassword -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:45 IST" name="tearDown" finished-at="2025-02-17T13:09:45 IST" duration-ms="156" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginWithInvalidUsenameValidPassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsenameValidPassword()[pri:3, instance:testScript.LoginTest@15de0b3c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLoginWithValidUsernameInvalidPassword status=SUCCESS method=LoginTest.verifyLoginWithValidUsernameInvalidPassword(java.lang.String,java.lang.String)[pri:2, instance:testScript.LoginTest@557caf28] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:45 IST" name="setUp" finished-at="2025-02-17T13:09:47 IST" duration-ms="1955" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:27 IST" name="setUp" finished-at="2025-02-20T15:20:29 IST" duration-ms="1865" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -130,15 +98,41 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginWithInvalidUsenameInValidPassword()[pri:4, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:47 IST" name="verifyLoginWithInvalidUsenameInValidPassword" finished-at="2025-02-17T13:09:48 IST" duration-ms="506" status="PASS">
+        <test-method signature="verifyLoginWithInvalidUsenameValidPassword()[pri:3, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:29 IST" name="verifyLoginWithInvalidUsenameValidPassword" finished-at="2025-02-20T15:20:31 IST" duration-ms="1415" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidUsenameInValidPassword -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@15de0b3c]" started-at="2025-02-17T13:09:48 IST" name="tearDown" finished-at="2025-02-17T13:09:48 IST" duration-ms="150" status="PASS">
+        </test-method> <!-- verifyLoginWithInvalidUsenameValidPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:31 IST" name="tearDown" finished-at="2025-02-20T15:20:31 IST" duration-ms="146" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithInvalidUsenameInValidPassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsenameInValidPassword()[pri:4, instance:testScript.LoginTest@15de0b3c] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsenameValidPassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsenameValidPassword()[pri:3, instance:testScript.LoginTest@557caf28] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:31 IST" name="setUp" finished-at="2025-02-20T15:20:33 IST" duration-ms="1938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginWithInvalidUsenameInValidPassword()[pri:4, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:33 IST" name="verifyLoginWithInvalidUsenameInValidPassword" finished-at="2025-02-20T15:20:33 IST" duration-ms="501" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidUsenameInValidPassword -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@557caf28]" started-at="2025-02-20T15:20:33 IST" name="tearDown" finished-at="2025-02-20T15:20:33 IST" duration-ms="137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithInvalidUsenameInValidPassword status=SUCCESS method=LoginTest.verifyLoginWithInvalidUsenameInValidPassword()[pri:4, instance:testScript.LoginTest@557caf28] output={null}]]]>
               </value>
             </param>
           </params>
@@ -147,7 +141,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- tearDown -->
       </class> <!-- testScript.LoginTest -->
       <class name="testScript.CategoryTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.CategoryTest@3857f613]" started-at="2025-02-17T13:09:55 IST" name="setUp" finished-at="2025-02-17T13:09:57 IST" duration-ms="1969" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.CategoryTest@3bf7ca37]" started-at="2025-02-20T15:20:45 IST" name="setUp" finished-at="2025-02-20T15:20:47 IST" duration-ms="1985" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -158,92 +152,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCreationOfNewCategoryInCategoryPage()[pri:1, instance:testScript.CategoryTest@3857f613]" started-at="2025-02-17T13:09:57 IST" name="verifyCreationOfNewCategoryInCategoryPage" finished-at="2025-02-17T13:10:08 IST" duration-ms="10978" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')]"}
-  (Session info: chrome=133.0.6943.98)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [762700ea347075423b15889b3886ecbe, findElement {value=//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\sreen\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53812}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53812/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 762700ea347075423b15889b3886ecbe]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')]"}
-  (Session info: chrome=133.0.6943.98)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [762700ea347075423b15889b3886ecbe, findElement {value=//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\sreen\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53812}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53812/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 762700ea347075423b15889b3886ecbe
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-at pages.HomePage.categoryClick(HomePage.java:63)
-at testScript.CategoryTest.verifyCreationOfNewCategoryInCategoryPage(CategoryTest.java:30)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="verifyCreationOfNewCategoryInCategoryPage()[pri:1, instance:testScript.CategoryTest@3bf7ca37]" started-at="2025-02-20T15:20:47 IST" name="verifyCreationOfNewCategoryInCategoryPage" finished-at="2025-02-20T15:20:49 IST" duration-ms="2020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCreationOfNewCategoryInCategoryPage -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.CategoryTest@3857f613]" started-at="2025-02-17T13:10:08 IST" name="tearDown" finished-at="2025-02-17T13:10:08 IST" duration-ms="352" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.CategoryTest@3bf7ca37]" started-at="2025-02-20T15:20:49 IST" name="tearDown" finished-at="2025-02-20T15:20:49 IST" duration-ms="166" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCreationOfNewCategoryInCategoryPage status=FAILURE method=CategoryTest.verifyCreationOfNewCategoryInCategoryPage()[pri:1, instance:testScript.CategoryTest@3857f613] output={null}]]]>
+                <![CDATA[[TestResult name=verifyCreationOfNewCategoryInCategoryPage status=SUCCESS method=CategoryTest.verifyCreationOfNewCategoryInCategoryPage()[pri:1, instance:testScript.CategoryTest@3bf7ca37] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.CategoryTest@3857f613]" started-at="2025-02-17T13:10:08 IST" name="setUp" finished-at="2025-02-17T13:10:10 IST" duration-ms="1966" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.CategoryTest@3bf7ca37]" started-at="2025-02-20T15:20:49 IST" name="setUp" finished-at="2025-02-20T15:20:51 IST" duration-ms="1918" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -254,85 +178,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDeleteOfCategory()[pri:2, instance:testScript.CategoryTest@3857f613]" started-at="2025-02-17T13:10:10 IST" name="verifyDeleteOfCategory" finished-at="2025-02-17T13:10:21 IST" duration-ms="11166" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')]"}
-  (Session info: chrome=133.0.6943.98)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [17a39f891dc5d05c108436fbc075aaf3, findElement {value=//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\sreen\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53837/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 17a39f891dc5d05c108436fbc075aaf3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')]"}
-  (Session info: chrome=133.0.6943.98)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [17a39f891dc5d05c108436fbc075aaf3, findElement {value=//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and contains(@class, 'small-box-footer')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 133.0.6943.98 (da53563ceb66..., userDataDir: C:\Users\sreen\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53837}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53837/devtoo..., se:cdpVersion: 133.0.6943.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 17a39f891dc5d05c108436fbc075aaf3
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
-at pages.HomePage.categoryClick(HomePage.java:63)
-at testScript.CategoryTest.verifyDeleteOfCategory(CategoryTest.java:51)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="verifyDeleteOfCategory()[pri:2, instance:testScript.CategoryTest@3bf7ca37]" started-at="2025-02-20T15:20:51 IST" name="verifyDeleteOfCategory" finished-at="2025-02-20T15:20:53 IST" duration-ms="1275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDeleteOfCategory -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.CategoryTest@3857f613]" started-at="2025-02-17T13:10:21 IST" name="tearDown" finished-at="2025-02-17T13:10:22 IST" duration-ms="325" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.CategoryTest@3bf7ca37]" started-at="2025-02-20T15:20:53 IST" name="tearDown" finished-at="2025-02-20T15:20:53 IST" duration-ms="176" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyDeleteOfCategory status=FAILURE method=CategoryTest.verifyDeleteOfCategory()[pri:2, instance:testScript.CategoryTest@3857f613] output={null}]]]>
+                <![CDATA[[TestResult name=verifyDeleteOfCategory status=SUCCESS method=CategoryTest.verifyDeleteOfCategory()[pri:2, instance:testScript.CategoryTest@3bf7ca37] output={null}]]]>
               </value>
             </param>
           </params>
@@ -340,8 +194,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testScript.CategoryTest -->
-      <class name="testScript.ManageNewsTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.ManageNewsTest@489115ef]" started-at="2025-02-17T13:09:48 IST" name="setUp" finished-at="2025-02-17T13:09:50 IST" duration-ms="1974" status="PASS">
+      <class name="testScript.SubCategoryTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.SubCategoryTest@4d1c00d0]" started-at="2025-02-20T15:21:00 IST" name="setUp" finished-at="2025-02-20T15:21:02 IST" duration-ms="1901" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -352,22 +206,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyNewNewsCreation()[pri:1, instance:testScript.ManageNewsTest@489115ef]" started-at="2025-02-17T13:09:50 IST" name="verifyNewNewsCreation" finished-at="2025-02-17T13:09:51 IST" duration-ms="1581" status="PASS">
+        <test-method signature="verifyCreationOfNewSubCategory__FileUploadUsingSendKeys()[pri:1, instance:testScript.SubCategoryTest@4d1c00d0]" started-at="2025-02-20T15:21:02 IST" name="verifyCreationOfNewSubCategory__FileUploadUsingSendKeys" finished-at="2025-02-20T15:21:04 IST" duration-ms="2195" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyNewNewsCreation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.ManageNewsTest@489115ef]" started-at="2025-02-17T13:09:51 IST" name="tearDown" finished-at="2025-02-17T13:09:51 IST" duration-ms="160" status="PASS">
+        </test-method> <!-- verifyCreationOfNewSubCategory__FileUploadUsingSendKeys -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.SubCategoryTest@4d1c00d0]" started-at="2025-02-20T15:21:04 IST" name="tearDown" finished-at="2025-02-20T15:21:04 IST" duration-ms="158" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyNewNewsCreation status=SUCCESS method=ManageNewsTest.verifyNewNewsCreation()[pri:1, instance:testScript.ManageNewsTest@489115ef] output={null}]]]>
+                <![CDATA[[TestResult name=verifyCreationOfNewSubCategory__FileUploadUsingSendKeys status=SUCCESS method=SubCategoryTest.verifyCreationOfNewSubCategory__FileUploadUsingSendKeys()[pri:1, instance:testScript.SubCategoryTest@4d1c00d0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.ManageNewsTest@489115ef]" started-at="2025-02-17T13:09:51 IST" name="setUp" finished-at="2025-02-17T13:09:53 IST" duration-ms="1938" status="PASS">
+      </class> <!-- testScript.SubCategoryTest -->
+      <class name="testScript.ManageNewsTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.ManageNewsTest@79079097]" started-at="2025-02-20T15:20:53 IST" name="setUp" finished-at="2025-02-20T15:20:55 IST" duration-ms="1876" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -378,15 +234,41 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCreatedNewsSearch()[pri:2, instance:testScript.ManageNewsTest@489115ef]" started-at="2025-02-17T13:09:53 IST" name="verifyCreatedNewsSearch" finished-at="2025-02-17T13:09:55 IST" duration-ms="1356" status="PASS">
+        <test-method signature="verifyNewNewsCreation()[pri:1, instance:testScript.ManageNewsTest@79079097]" started-at="2025-02-20T15:20:55 IST" name="verifyNewNewsCreation" finished-at="2025-02-20T15:20:56 IST" duration-ms="1549" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreatedNewsSearch -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.ManageNewsTest@489115ef]" started-at="2025-02-17T13:09:55 IST" name="tearDown" finished-at="2025-02-17T13:09:55 IST" duration-ms="167" status="PASS">
+        </test-method> <!-- verifyNewNewsCreation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.ManageNewsTest@79079097]" started-at="2025-02-20T15:20:56 IST" name="tearDown" finished-at="2025-02-20T15:20:56 IST" duration-ms="155" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCreatedNewsSearch status=SUCCESS method=ManageNewsTest.verifyCreatedNewsSearch()[pri:2, instance:testScript.ManageNewsTest@489115ef] output={null}]]]>
+                <![CDATA[[TestResult name=verifyNewNewsCreation status=SUCCESS method=ManageNewsTest.verifyNewNewsCreation()[pri:1, instance:testScript.ManageNewsTest@79079097] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.ManageNewsTest@79079097]" started-at="2025-02-20T15:20:56 IST" name="setUp" finished-at="2025-02-20T15:20:58 IST" duration-ms="1971" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyCreatedNewsSearch()[pri:2, instance:testScript.ManageNewsTest@79079097]" started-at="2025-02-20T15:20:58 IST" name="verifyCreatedNewsSearch" finished-at="2025-02-20T15:21:00 IST" duration-ms="1375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatedNewsSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.ManageNewsTest@79079097]" started-at="2025-02-20T15:21:00 IST" name="tearDown" finished-at="2025-02-20T15:21:00 IST" duration-ms="161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCreatedNewsSearch status=SUCCESS method=ManageNewsTest.verifyCreatedNewsSearch()[pri:2, instance:testScript.ManageNewsTest@79079097] output={null}]]]>
               </value>
             </param>
           </params>
@@ -394,8 +276,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testScript.ManageNewsTest -->
-      <class name="testScript.AdminUsersTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@1d296da]" started-at="2025-02-17T13:09:28 IST" name="setUp" finished-at="2025-02-17T13:09:31 IST" duration-ms="3075" status="PASS">
+      <class name="testScript.HomeTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.HomeTest@198b6731]" started-at="2025-02-20T15:20:33 IST" name="setUp" finished-at="2025-02-20T15:20:35 IST" duration-ms="1879" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -406,22 +288,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCreationOfNewAdminUsers()[pri:1, instance:testScript.AdminUsersTest@1d296da]" started-at="2025-02-17T13:09:31 IST" name="verifyCreationOfNewAdminUsers" finished-at="2025-02-17T13:09:36 IST" duration-ms="4120" status="PASS">
+        <test-method signature="verifyLogOut()[pri:0, instance:testScript.HomeTest@198b6731]" started-at="2025-02-20T15:20:35 IST" name="verifyLogOut" finished-at="2025-02-20T15:20:36 IST" duration-ms="1041" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreationOfNewAdminUsers -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@1d296da]" started-at="2025-02-17T13:09:36 IST" name="tearDown" finished-at="2025-02-17T13:09:36 IST" duration-ms="181" status="PASS">
+        </test-method> <!-- verifyLogOut -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.HomeTest@198b6731]" started-at="2025-02-20T15:20:36 IST" name="tearDown" finished-at="2025-02-20T15:20:36 IST" duration-ms="166" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCreationOfNewAdminUsers status=SUCCESS method=AdminUsersTest.verifyCreationOfNewAdminUsers()[pri:1, instance:testScript.AdminUsersTest@1d296da] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLogOut status=SUCCESS method=HomeTest.verifyLogOut()[pri:0, instance:testScript.HomeTest@198b6731] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@1d296da]" started-at="2025-02-17T13:09:36 IST" name="setUp" finished-at="2025-02-17T13:09:38 IST" duration-ms="2000" status="PASS">
+      </class> <!-- testScript.HomeTest -->
+      <class name="testScript.AdminUsersTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@3c9754d8]" started-at="2025-02-20T15:20:36 IST" name="setUp" finished-at="2025-02-20T15:20:38 IST" duration-ms="1937" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -432,15 +316,41 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAdminUserSearch()[pri:2, instance:testScript.AdminUsersTest@1d296da]" started-at="2025-02-17T13:09:38 IST" name="verifyAdminUserSearch" finished-at="2025-02-17T13:09:39 IST" duration-ms="1721" status="PASS">
+        <test-method signature="verifyCreationOfNewAdminUsers()[pri:1, instance:testScript.AdminUsersTest@3c9754d8]" started-at="2025-02-20T15:20:38 IST" name="verifyCreationOfNewAdminUsers" finished-at="2025-02-20T15:20:41 IST" duration-ms="2747" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdminUserSearch -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@1d296da]" started-at="2025-02-17T13:09:39 IST" name="tearDown" finished-at="2025-02-17T13:09:40 IST" duration-ms="178" status="PASS">
+        </test-method> <!-- verifyCreationOfNewAdminUsers -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@3c9754d8]" started-at="2025-02-20T15:20:41 IST" name="tearDown" finished-at="2025-02-20T15:20:41 IST" duration-ms="165" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAdminUserSearch status=SUCCESS method=AdminUsersTest.verifyAdminUserSearch()[pri:2, instance:testScript.AdminUsersTest@1d296da] output={null}]]]>
+                <![CDATA[[TestResult name=verifyCreationOfNewAdminUsers status=SUCCESS method=AdminUsersTest.verifyCreationOfNewAdminUsers()[pri:1, instance:testScript.AdminUsersTest@3c9754d8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testScript.AdminUsersTest@3c9754d8]" started-at="2025-02-20T15:20:41 IST" name="setUp" finished-at="2025-02-20T15:20:43 IST" duration-ms="2164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAdminUserSearch()[pri:2, instance:testScript.AdminUsersTest@3c9754d8]" started-at="2025-02-20T15:20:43 IST" name="verifyAdminUserSearch" finished-at="2025-02-20T15:20:45 IST" duration-ms="1755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdminUserSearch -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScript.AdminUsersTest@3c9754d8]" started-at="2025-02-20T15:20:45 IST" name="tearDown" finished-at="2025-02-20T15:20:45 IST" duration-ms="161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAdminUserSearch status=SUCCESS method=AdminUsersTest.verifyAdminUserSearch()[pri:2, instance:testScript.AdminUsersTest@3c9754d8] output={null}]]]>
               </value>
             </param>
           </params>

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import constant.Constant;
 import utility.FileUploadUtility;
@@ -52,18 +53,27 @@ public class CategoryPage {
 
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement alert_locator_delete;
+	
+	@FindBy(xpath="//a[contains(@onclick, 'click_button(2)')]")
+	WebElement btn_cat_search;
+	
+	@FindBy(xpath="//input[@placeholder='Category']")
+	WebElement cat_text;
 
-	public CategoryPage btnCategoryNewClick() {
-		btn_category_new.click();
-		return this;
+	
+	public CategoryPage clickNewCategoryButton() {
+	    wait.waitToElementClick(driver, btn_category_new); //Wait first
+	    btn_category_new.click(); // Then click
+	    return this;
 	}
 
-	public CategoryPage nameCategory(String category_name) {
+
+	public CategoryPage enterCategoryName(String category_name) {
 		txt_category_input.sendKeys(category_name);
 		return this;
 	}
 
-	public CategoryPage btnDiscountClick() {
+	public CategoryPage selectDiscountGroup() {
 		box_select_groups.click();
 		return this;
 	}
@@ -73,26 +83,31 @@ public class CategoryPage {
 		return this;
 	}
 
-	public CategoryPage fileUploadSendKeys() throws AWTException, InterruptedException {
+	public CategoryPage uploadFile() throws AWTException, InterruptedException {
 		wait.waitForVisibilityOfElement(driver, btn_choose_file);
 		fileupload.sendKeysForFileUpload(btn_choose_file, Constant.IMAGE);
 		return this;
 	}
 
-	public CategoryPage btnCategorySaveClick() {
+	public CategoryPage clickSaveButton() {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		js.executeScript("window.scrollBy(0,3000)", "");
-
-		wait.waitToElementClick(driver, btn_save);
-
-		btn_save.click();
+		PageUtility pageutil=new PageUtility(driver);
+		pageutil.javaScriptExecutorMethodClick(btn_save);
 		return this;
 	}
 
 	public boolean isCategoryCreatedSucessDisplayed() {
 		return alert_locator.getText().contains("Success");
+	}
+	public CategoryPage searchCategory() {
+		btn_cat_search.click();
+		return this;
+	}
+	public CategoryPage enterCategory(String category) {
+		wait.waitForVisibilityOfElement(driver, cat_text); // Wait for visibility
+	    cat_text.sendKeys(category); // Send keys directly to the WebElement
+	    return this;
+		
 	}
 
 	public CategoryPage btnCategoryDeleteClick() {

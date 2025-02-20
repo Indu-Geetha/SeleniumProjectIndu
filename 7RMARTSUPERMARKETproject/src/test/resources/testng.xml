@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<parameter name="username" value="admin"></parameter>
+	<parameter name="password" value="aaaaaaaa"></parameter>
 	<test thread-count="5" name="Test">
 		<parameter name="browzer" value="chrome" />
 		<classes>
-			<class name="testScript.AdminUsersTest"></class>
-			<class name="testScript.LoginTest"></class>
-			<class name="testScript.ManageNewsTest"></class>
+		    <class name="testScript.LoginTest"></class>
+		    <class name="testScript.HomeTest"></class>
+		    <class name="testScript.AdminUsersTest"></class>
 			<class name="testScript.CategoryTest"></class>
+			<class name="testScript.ManageNewsTest"></class>
+			<class name="testScript.SubCategoryTest"></class>
 		</classes>
 	</test> <!--
 	Test -->
